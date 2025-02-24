@@ -10,6 +10,7 @@
     "ajv": "^8.17.1",
     "ajv-keywords": "^5.1.0",
     "lucide-react": "^0.475.0",
+    "postcss-loader": "^8.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
@@ -42,7 +43,12 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "@tailwindcss/postcss": "^4.0.8",
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.8"
   },
-  "homepage": "https://your-username.github.io/my-portfolio"
+  "homepage": "https://ekram007.github.io"
 }
