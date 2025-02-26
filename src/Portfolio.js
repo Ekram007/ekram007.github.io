@@ -9,7 +9,7 @@ const Portfolio = () => {
     const [typeIndex, setTypeIndex] = useState(0);
     const [deleting, setDeleting] = useState(false);
 
-    const textsToType = ["Machine Learning Engineer", "NLP Researcher"];
+    const textsToType = ["Machine Learning Engineer", "AI Researcher", "NLP Expert"];
     const typingSpeed = 100;
     const deletingSpeed = 50;
     const delayBetweenTexts = 2000;
@@ -103,14 +103,16 @@ const Portfolio = () => {
 
     const educationData = [
         {
-            degree: "BSc Computer Science",
-            institution: "Shahjalal University",
+            degree: "BSc in Computer Science & Engineering (CSE)",
+            institution: "Shahjalal University of Science and Technology",
+            location: "Sylhet, Bangladesh", // Added location
             duration: "2017 – 2021",
             gpa: "CGPA: 3.18/4.00"
         },
         {
-            degree: "Higher Secondary",
+            degree: "Higher Secondary Certificate (HSC)",
             institution: "Dhaka College",
+            location: "Dhaka, Bangladesh", // Added location
             duration: "2014 – 2016",
             gpa: "GPA: 5.00/5.00"
         }
@@ -238,7 +240,7 @@ const Portfolio = () => {
                                 Hi, I'm Ekram
                             </div>
                             <div className="text-3xl md:text-4xl font-medium text-teal-200 mt-4">
-                                Transforming Ideas into Intelligent Solutions
+                                Passionate about life, AI, and discovery.
                             </div>
                         </h1>
 
@@ -356,37 +358,34 @@ const Portfolio = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {[
                                 {
-                                    title:
-                                        "SENTIGOLD: A LARGE BANGLA GOLD STANDARD MULTI-DOMAIN SENTIMENT ANALYSIS DATASET AND ITS EVALUATION",
+                                    title: "SENTIGOLD: A LARGE BANGLA GOLD STANDARD MULTI-DOMAIN SENTIMENT ANALYSIS DATASET AND ITS EVALUATION",
+                                    authors: <><strong>Md. Ekramul Islam</strong>, Labib Chowdhury, Faisal Ahamed Khan, Shazzad Hossain, Md Sourave Hossain, Mohammad Mamun Or Rashid, Nabeel Mohammed, Mohammad Ruhul Amin</>,
                                     publishedDate: "04-08-2023",
-                                    doi: "HTTPS://DOI.ORG/10.1145/3580305.3599904",
-                                    publicationType: "INTERNATIONAL CONFERENCE",
+                                    doi: "https://doi.org/10.1145/3580305.3599904",
+                                    publicationType: <>29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (<strong>KDD '23</strong>)</>,
                                     citationCount: 11,
                                     publicationRank: "A*",
-                                    overview:
-                                        "In this study, we introduce SentiGOLD, a Bangla multi-domain sentiment analysis dataset with 70,000 samples..."
+                                    overview: "Introduces SentiGOLD, a Bangla multi-domain sentiment analysis dataset with 70,000 samples, establishing new benchmarks for Bangla NLP research."
                                 },
                                 {
-                                    title:
-                                        "BANLEMMA: A WORD FORMATION DEPENDENT RULE AND DICTIONARY BASED BANGLA LEMMATIZER",
+                                    title: "BANLEMMA: A WORD FORMATION DEPENDENT RULE AND DICTIONARY BASED BANGLA LEMMATIZER",
+                                    authors: <>Sadia Afrin, Md. Shahad Mahmud Chowdhury, <strong>Md. Ekramul Islam</strong>, Faisal Khan, Labib Chowdhury, Md. Mahtab, Nazifa Chowdhury, Massud Forkan, Neelima Kundu, Hakim Arif, Mohammad Mamun Or Rashid, Mohammad Amin, Nabeel Mohammed</>,
                                     publishedDate: "15-12-2023",
-                                    doi: "HTTPS://DOI.ORG/10.18653/V1/2023.FINDINGS-EMNLP.240",
-                                    publicationType: "INTERNATIONAL CONFERENCE",
+                                    doi: "https://doi.org/10.18653/v1/2023.findings-emnlp.240",
+                                    publicationType: <>Findings of the Association for Computational Linguistics: <strong>EMNLP 2023</strong></>,
                                     citationCount: 1,
                                     publicationRank: "A*",
-                                    overview:
-                                        "Lemmatization is vital in NLP and linguistics for reducing data density. In this study, we propose a Bangla lemmatizer using linguistic rules..."
+                                    overview: "Presents a novel rule-based Bangla lemmatizer achieving 98.17% accuracy through morphological analysis and dictionary lookup."
                                 },
                                 {
-                                    title:
-                                        "WORD COMPLETION AND SEQUENCE PREDICTION IN BANGLA LANGUAGE USING TRIE AND A HYBRID APPROACH OF SEQUENTIAL LSTM AND N-GRAM",
+                                    title: "WORD COMPLETION AND SEQUENCE PREDICTION IN BANGLA LANGUAGE USING TRIE AND A HYBRID APPROACH OF SEQUENTIAL LSTM AND N-GRAM",
+                                    authors: <>Soumik Sarker, <strong>Md. Ekramul Islam</strong>, Jillur Rahman Saurav, Md Mahadi Hasan Nahid</>,
                                     publishedDate: "28-11-2020",
-                                    doi: "HTTPS://DOI.ORG/10.1109/ICAICT51780.2020.9333518",
-                                    publicationType: "LOCAL CONFERENCE",
+                                    doi: "https://doi.org/10.1109/ICAICT51780.2020.9333518",
+                                    publicationType: <>2nd International Conference on Advanced Information and Communication Technology (<strong>ICAICT</strong>)</>,
                                     citationCount: 13,
                                     publicationRank: "N/A",
-                                    overview:
-                                        "Autocompletion and sequence prediction form the foundation of assistance systems, enhancing typing efficiency..."
+                                    overview: "Proposes a hybrid NLP model combining trie data structures with LSTM networks for Bangla text prediction, enhancing typing efficiency."
                                 },
                             ].map((pub, index) => (
                                 <div
@@ -401,7 +400,10 @@ const Portfolio = () => {
                                         {pub.title}
                                     </h3>
                                     <p className="text-gray-600 text-sm mb-1">
-                                        <strong>Published Date:</strong> {pub.publishedDate}
+                                        <i>{pub.authors}</i>
+                                    </p>
+                                    <p className="text-gray-600 text-sm mb-1">
+                                        {pub.publicationType}
                                     </p>
                                     <p className="text-gray-600 text-sm mb-1">
                                         <strong>DOI:</strong>{" "}
@@ -413,16 +415,10 @@ const Portfolio = () => {
                                             {pub.doi}
                                         </a>
                                     </p>
-                                    <p className="text-gray-600 text-sm mb-1">
-                                        <strong>Type:</strong> {pub.publicationType}
-                                    </p>
+                                    <p className="text-gray-700 text-sm mb-4">{pub.overview}</p>
                                     <p className="text-gray-600 text-sm mb-1">
                                         <strong>Citations:</strong> {pub.citationCount}
                                     </p>
-                                    <p className="text-gray-600 text-sm mb-1">
-                                        <strong>Rank:</strong> {pub.publicationRank}
-                                    </p>
-                                    <p className="text-gray-700 text-sm mb-4">{pub.overview}</p>
                                 </div>
                             ))}
                         </div>
@@ -524,6 +520,10 @@ const Portfolio = () => {
                                                         </p>
 
                                                         <div className="space-y-2 text-gray-600">
+                                                            <p className="flex items-center gap-2">
+                                                                <MapPin size={16} className="text-teal-500" />
+                                                                {edu.location}
+                                                            </p>
                                                             <p className="flex items-center gap-2">
                                                                 <Calendar size={16} className="text-teal-500" />
                                                                 {edu.duration}
