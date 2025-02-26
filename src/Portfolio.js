@@ -276,7 +276,6 @@ const Portfolio = () => {
                         {/* Enhanced Action Buttons */}
                         <div className="flex flex-wrap justify-center gap-6 mt-12">
                             <a href="/resume.pdf" download className="relative group flex items-center gap-3 px-8 py-4 bg-teal-600 rounded-full hover:bg-teal-700 transition-all shadow-xl hover:shadow-2xl">
-                                <span className="absolute -inset-1 bg-teal-500 blur-12 opacity-30 group-hover:opacity-50 transition-opacity"></span>
                                 <ArrowRight className="animate-bounce-horizontal" size={20} />
                                 <span className="text-lg font-medium">Download Resume</span>
                             </a>
