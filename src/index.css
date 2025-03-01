@@ -16,6 +16,12 @@
     100% { transform: translateY(10px); opacity: 0; }
 }
 
+@layer utilities {
+  .scroll-mt-header {
+    scroll-margin-top: 100px;
+  }
+}
+
 .animate-float {
     animation: float 8s ease-in-out infinite;
 }

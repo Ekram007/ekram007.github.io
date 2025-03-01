@@ -38,11 +38,26 @@ const Portfolio = () => {
         return () => clearTimeout(timeout);
     }, [typedText, deleting, typeIndex]);
 
-    // Scroll detection for sticky navbar
+    // Modified combined scroll handler
     useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 50);
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        const handleScroll = () => {
+        setIsScrolled(window.scrollY > 50);
+    
+        // Section tracking logic
+        const sections = ['about', 'experience', 'publications', 'skills', 'education'];
+        const scrollPosition = window.scrollY + window.innerHeight / 3;
+        
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const section = document.getElementById(sections[i]);
+            if (section?.offsetTop <= scrollPosition) {
+            setActiveSection(sections[i]);
+            break;
+            }
+        }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     // Smooth scroll with offset
@@ -310,7 +325,7 @@ const Portfolio = () => {
                 {/* Main Content Sections */}
                 <main className="max-w-6xl mx-auto px-6 py-16">
                     {/* Experience Section */}
-                    <section id="experience" className="mb-24 pt-16">
+                    <section id="experience" className="mb-24 pt-16 scroll-mt-header" style={{ scrollMarginTop: "100px" }}>
                         <h2 className="text-4xl font-bold text-center mb-16 relative">
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400">
                                 Professional Journey
@@ -349,7 +364,7 @@ const Portfolio = () => {
                     </section>
 
                     {/* Publications Section */}
-                    <section id="publications" className="mb-24 pt-16">
+                    <section id="publications" className="mb-24 pt-16 scroll-mt-header" style={{ scrollMarginTop: "100px" }}>
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold text-gray-800">Publications</h2>
                             <div className="w-24 h-1 bg-teal-500 mx-auto mt-4"></div>
@@ -425,7 +440,7 @@ const Portfolio = () => {
                     </section>
 
                     {/* Skills Section */}
-                    <section id="skills" className="py-24 bg-teal-50">
+                    <section id="skills" className="py-24 bg-teal-50 scroll-mt-header" style={{ scrollMarginTop: "100px" }}>
                         <div className="max-w-6xl mx-auto px-6">
                             <h2 className="text-4xl font-bold text-center mb-16">
                                 Technical Expertise
@@ -472,7 +487,7 @@ const Portfolio = () => {
                     </section>
 
                     {/* Enhanced Education Section */}
-                    <section id="education" className="py-24 bg-gradient-to-br from-teal-50 to-white">
+                    <section id="education" className="py-24 bg-gradient-to-br from-teal-50 to-white scroll-mt-header" style={{ scrollMarginTop: "100px" }}>
                         <div className="max-w-7xl mx-auto px-6">
                             <h2 className="text-4xl font-bold text-center mb-16 relative">
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400">
