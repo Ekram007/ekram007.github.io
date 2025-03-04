@@ -41,21 +41,21 @@ const Portfolio = () => {
     // Modified combined scroll handler
     useEffect(() => {
         const handleScroll = () => {
-        setIsScrolled(window.scrollY > 50);
-    
-        // Section tracking logic
-        const sections = ['about', 'experience', 'publications', 'skills', 'education'];
-        const scrollPosition = window.scrollY + window.innerHeight / 3;
-        
-        for (let i = sections.length - 1; i >= 0; i--) {
-            const section = document.getElementById(sections[i]);
-            if (section?.offsetTop <= scrollPosition) {
-            setActiveSection(sections[i]);
-            break;
+            setIsScrolled(window.scrollY > 50);
+
+            // Section tracking logic
+            const sections = ['about', 'experience', 'publications', 'skills', 'education'];
+            const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = document.getElementById(sections[i]);
+                if (section?.offsetTop <= scrollPosition) {
+                    setActiveSection(sections[i]);
+                    break;
+                }
             }
-        }
         };
-    
+
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -233,15 +233,11 @@ const Portfolio = () => {
             {/* Main Content */}
             <div className="flex-1 md:ml-64">
                 {/* Enhanced About Me Section */}
-                <header id="about" className="h-screen bg-gradient-to-br from-teal-900 via-gray-800 to-teal-700 text-white pt-20 flex flex-col items-center justify-center relative overflow-hidden">
-                    {/* Animated Background Elements */}
-                    <div className="absolute inset-0 opacity-20">
-                        <div className="absolute top-20 left-1/4 w-48 h-48 bg-teal-500 rounded-full mix-blend-soft-light filter blur-3xl animate-float"></div>
-                        <div className="absolute bottom-32 right-1/3 w-32 h-32 bg-teal-400 rounded-full mix-blend-soft-light filter blur-3xl animate-float-delayed"></div>
-                    </div>
+                <header id="about" className="min-h-screen md:h-screen bg-gradient-to-br from-teal-900 via-gray-800 to-teal-700 text-white pt-20 md:pt-0 flex flex-col items-center justify-center relative overflow-hidden">
+                    {/* ... existing background elements ... */}
 
                     {/* Profile Image for Mobile */}
-                    <div className="md:hidden w-48 h-48 rounded-full overflow-hidden border-4 border-teal-300 shadow-xl mb-8 transform hover:scale-105 transition-transform">
+                    <div className="md:hidden w-32 h-32 rounded-full overflow-hidden border-4 border-teal-300 shadow-xl mb-6 transform hover:scale-105 transition-transform">
                         <img
                             src="/profile.jpg"
                             alt="Ekramul Islam"
@@ -249,73 +245,69 @@ const Portfolio = () => {
                         />
                     </div>
 
-                    <div className="max-w-6xl mx-auto px-6 flex flex-col items-center gap-6 relative text-center">
-                        <h1 className="text-5xl md:text-7xl font-bold drop-shadow-lg space-y-4">
+                    <div className="max-w-6xl mx-auto px-4 md:px-6 flex flex-col items-center gap-4 md:gap-6 relative text-center">
+                        <h1 className="text-4xl md:text-7xl font-bold drop-shadow-lg space-y-2 md:space-y-4">
                             <div className="bg-gradient-to-r from-teal-300 to-white bg-clip-text text-transparent">
                                 Hi, I'm Ekram
                             </div>
-                            <div className="text-3xl md:text-4xl font-medium text-teal-200 mt-4">
+                            <div className="text-xl md:text-4xl font-medium text-teal-200 mt-2 md:mt-4">
                                 Passionate about life, AI, and discovery.
                             </div>
                         </h1>
 
-                        {/* Enhanced Typed Text Container */}
-                        <div className="mt-6 relative inline-block">
+                        {/* Typed Text Container */}
+                        <div className="mt-4 md:mt-6 relative inline-block">
                             <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 to-teal-600 rounded-lg blur opacity-30 animate-pulse"></div>
-                            <div className="relative text-2xl md:text-3xl font-mono px-6 py-3 bg-teal-800 bg-opacity-50 rounded-lg">
+                            <div className="relative text-lg md:text-3xl font-mono px-4 py-2 md:px-6 md:py-3 bg-teal-800 bg-opacity-50 rounded-lg">
                                 {typedText}
                                 <span className="border-r-2 border-teal-200 animate-pulse ml-1"></span>
                             </div>
                         </div>
 
-                        {/* Enhanced Bio Section */}
-                        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-lg md:text-xl mt-8 text-teal-100">
-                            <div className="space-y-4 relative">
-                                <div className="absolute -top-4 -left-4 text-teal-400 text-6xl opacity-25">“</div>
+                        {/* Bio Section */}
+                        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4 md:gap-8 text-base md:text-xl mt-4 md:mt-8 text-teal-100">
+                            <div className="space-y-2 md:space-y-4 relative px-4">
                                 <p className="relative z-10">
                                     Specializing in NLP and Machine Learning, I bridge the gap between
-                                    theoretical research and practical implementation. With 3+ years
-                                    experience at leading tech companies, I deliver solutions that
-                                    combine technical excellence with domain expertise.
+                                    theoretical research and practical implementation.
                                 </p>
                             </div>
-                            <div className="space-y-4 relative">
-                                <div className="absolute -top-4 -right-4 text-teal-400 text-6xl opacity-25 rotate-180">“</div>
+                            <div className="space-y-2 md:space-y-4 relative px-4">
                                 <p className="relative z-10">
                                     Passionate about low-resource language processing, I've pioneered
-                                    multiple NLP frameworks for Bangla language. My work focuses on
-                                    creating linguistically-aware AI systems that understand cultural
-                                    context and regional nuances.
+                                    multiple NLP frameworks for Bangla language.
                                 </p>
                             </div>
                         </div>
 
-                        {/* Enhanced Action Buttons */}
-                        <div className="flex flex-wrap justify-center gap-6 mt-12">
-                            <a href="/resume.pdf" download className="relative group flex items-center gap-3 px-8 py-4 bg-teal-600 rounded-full hover:bg-teal-700 transition-all shadow-xl hover:shadow-2xl">
-                                <ArrowRight className="animate-bounce-horizontal" size={20} />
-                                <span className="text-lg font-medium">Download Resume</span>
+                        {/* Action Buttons */}
+                        <div className="flex flex-col md:flex-wrap items-center justify-center gap-4 md:gap-6 mt-8 md:mt-12">
+                            <a href="/resume.pdf" download className="relative group flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-teal-600 rounded-full hover:bg-teal-700 transition-all shadow-xl hover:shadow-2xl">
+                                <ArrowRight className="animate-bounce-horizontal" size={18} />
+                                <span className="text-sm md:text-lg font-medium">Download Resume</span>
                             </a>
 
-                            <div className="flex items-center gap-4">
+                            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
                                 {[
-                                    { icon: MapPin, text: "Dhaka, Bangladesh" },
+                                    { icon: MapPin, text: "Dhaka, BD" },
                                     { icon: Phone, text: "(+880) 1521434732" },
                                     { icon: Mail, text: "ei.ekramul.islam@gmail.com" }
                                 ].map((item, index) => (
-                                    <div key={index} className="flex items-center gap-2 px-4 py-2 bg-teal-800 bg-opacity-50 rounded-full hover:bg-opacity-70 transition-all cursor-pointer group">
-                                        <item.icon className="text-teal-300 group-hover:text-white transition-colors" size={18} />
-                                        <span className="text-sm md:text-base group-hover:text-white transition-colors">{item.text}</span>
+                                    <div key={index} className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-teal-800 bg-opacity-50 rounded-full hover:bg-opacity-70 transition-all cursor-pointer group">
+                                        <item.icon className="text-teal-300 group-hover:text-white transition-colors" size={16} />
+                                        <span className="text-xs md:text-sm group-hover:text-white transition-colors">{item.text}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
 
                         {/* Animated Scroll Indicator */}
-                        <div className="absolute bottom-8 animate-bounce-slow">
-                            <div className="relative w-12 h-20">
+                        {/* Animated Scroll Indicator */}
+                        {/* Animated Scroll Indicator */}
+                        <div className="absolute -bottom-20 md:-bottom-32 animate-bounce-slow">
+                            <div className="relative w-8 h-14 md:w-12 md:h-20 scale-150">
                                 <div className="absolute inset-0 border-2 border-teal-300 rounded-full">
-                                    <div className="absolute top-2 left-1/2 -translate-x-1/2 w-1 h-4 bg-teal-300 rounded-full animate-scroll-wheel"></div>
+                                    <div className="absolute top-1 md:top-2 left-1/2 -translate-x-1/2 w-1 h-3 md:h-4 bg-teal-300 rounded-full animate-scroll-wheel"></div>
                                 </div>
                             </div>
                         </div>
