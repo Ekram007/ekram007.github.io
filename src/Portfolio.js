@@ -104,7 +104,7 @@ const Portfolio = () => {
                 <>
                     <div className="mt-4">
                         <div className="font-semibold text-gray-800 mb-2">Corpus Project (Bangla):</div>
-                        <div className="ml-4 text-gray-700 mb-3">Aim was to develop a complete ecosystem for Bangla NLP filed, where deliverables include corpora, language models, downstream models, packages/api, applications etc. Some of my key contributions are: </div>
+                        <div className="text-gray-700 mb-3">Aim was to develop a complete ecosystem for Bangla NLP filed, where deliverables include corpora, language models, downstream models, packages/api, applications etc. Some of my key contributions are: </div>
                         <div className="ml-4 space-y-4">
                             <div>
                                 <div className="font-semibold text-gray-800 mb-2">Shallow and Deep Parsing (Core Component Lead):</div>
@@ -600,21 +600,21 @@ const Portfolio = () => {
                                     title: "Handwritten Character Generation",
                                     subtitle: "Undergraduate Thesis",
                                     description: "Experimented with GAN's (Conditional GAN, Auxiliary GAN etc) to synthesize images of Bangla handwritten characters from textual prompts.",
-                                    github: "https://github.com/Ekram007",
+                                    github: "https://github.com/Ekram007/Bangla-Handwritten-Character-Generation-using-GAN",
                                     technologies: ["GAN", "Conditional GAN", "Auxiliary GAN", "Computer Vision"]
                                 },
                                 {
                                     title: "Bangla Next Sequence Prediction",
                                     subtitle: "Published in IEEE (ICAICT '20)",
                                     description: "Proposed a solution using Trie and a combination of LSTM and N-gram to predict the relevant next sequence list in Bangla.",
-                                    github: "https://github.com/Ekram007",
+                                    github: "https://github.com/Ekram007/Onnesha",
                                     technologies: ["LSTM", "N-gram", "Trie", "NLP"]
                                 },
                                 {
                                     title: "Music Generation",
                                     subtitle: "Personal Research Project",
                                     description: "Conducted Midi music files collection, notes preparation and utilized BiLSTM GAN for music generation.",
-                                    github: "https://github.com/Ekram007",
+                                    github: "https://github.com/Ekram007/Music-Generation-using-Bidirection-LSTM-GAN",
                                     technologies: ["BiLSTM", "GAN", "MIDI", "Music Generation"]
                                 }
                             ].map((project, index) => (
