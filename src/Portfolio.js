@@ -282,9 +282,9 @@ const Portfolio = () => {
 
                         {/* Action Buttons */}
                         <div className="flex flex-col md:flex-wrap items-center gap-3 items-center justify-center gap-4 md:gap-6 mt-8 md:mt-12">
-                            <a href="/resume.pdf" download className="relative group flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-teal-600 rounded-full hover:bg-teal-700 transition-all shadow-xl hover:shadow-2xl">
+                            <a href="/Md._Ekramul_Islam_CV.pdf" download className="relative group flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-teal-600 rounded-full hover:bg-teal-700 transition-all shadow-xl hover:shadow-2xl">
                                 <ArrowRight className="animate-bounce-horizontal" size={18} />
-                                <span className="text-sm md:text-lg font-medium">Download Resume</span>
+                                <span className="text-sm md:text-lg font-medium">Download CV</span>
                             </a>
 
                             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
