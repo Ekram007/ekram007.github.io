@@ -44,7 +44,7 @@ const Portfolio = () => {
             setIsScrolled(window.scrollY > 50);
 
             // Section tracking logic
-            const sections = ['about', 'experience', 'publications', 'skills', 'education'];
+            const sections = ['about', 'experience', 'publications', 'academic-research', 'personal-projects', 'skills', 'education', 'linguistic-proficiency', 'extracurricular'];
             const scrollPosition = window.scrollY + window.innerHeight / 3;
 
             for (let i = sections.length - 1; i >= 0; i--) {
@@ -77,43 +77,47 @@ const Portfolio = () => {
     const experiences = [
         {
             title: "Machine Learning Engineer",
-            company: "IQVIA (A Fortune 500 Company)",
-            period: "Aug 2024 – Present",
+            company: "IQVIA (A Fortune 500 Company), North Carolina, US",
+            period: "Aug 2024 – Present | Remote",
             responsibilities: [
                 <>
-                    Developed NLP solutions, including <strong>chat assistants</strong>, using models like LLaMA, Claude, and ChatGPT, incorporating prompt engineering techniques such as few-shot learning, chain-of-thought, and advanced <strong>RAG</strong> techniques.
+                    Developed a conversational marketing co-planner agent with <strong>LangGraph</strong> tool-calling capabilities to automate complex ML workflows. This agent enables dynamic clustering of over 2,000 Healthcare Professionals by allowing users to select features, filter datasets, and generate personalized marketing campaigns while providing answers to any query from the dataset. <strong>Recognized with Impact Award</strong>.
                 </>,
                 <>
-                    Applied <strong>agentic approach</strong> to enable models to handle complex tasks autonomously and contextually, while leveraging <strong>AWS</strong> SageMaker and Bedrock for efficient model deployment, optimization, and scaling.
+                    Deployed open-source LLMs (e.g., DeepSeek, Qwen) on <strong>AWS SageMaker DJL Serving</strong> with vLLM backends, achieving first-token latency as low as <strong>90ms</strong>.
+                </>,
+                <>
+                    Collaborated with cross-functional teams to develop data-exploration-agent using <strong>LangGraph</strong>, where agent parse user queries, generate SQL Query, retrieved data and generate final answers with visualizations.
                 </>
             ]
         },
         {
             title: "Machine Learning Engineer",
             company: "Giga Tech Limited, Dhaka, Bangladesh",
-            period: "Jan 2022 – Jul 2024",
+            period: "Jan 2022 – Jul 2024 | Hybrid",
             responsibilities: [
                 <>
-                    Developed Shallow Parsing pipelines, including data preparation, training, and inference, using FastAPI, a PyPI package, and Dockerfile, achieving state-of-the-art results with a <strong>96.47%</strong> FScore on the Penn Treebank dataset.
+                    <strong>Shallow Parsing:</strong> Developed data preparation, training, inference pipelines with API (FastAPI), PyPI package, achieving SOTA results (<strong>96.47 FScore</strong>) on Penn Treebank.
                 </>,
                 <>
-                    Conducted extensive Sentiment Analysis experiments with transformer-based models, cross-dataset analysis, and statistical significance tests, leading to a publication at <strong>KDD '23</strong>.
+                    <strong>Sentiment Analysis:</strong> Conducted transformer based model experimentation, cross-dataset analysis, statistical significance tests, leading to a publication at <strong>KDD '23</strong> (First Author).
                 </>,
                 <>
-                    Achieved state-of-the-art performance in Named Entity Recognition (NER) on all Bangla datasets by implementing a novel RAG-based approach published in <strong>NAACL 2025</strong>.
+                    <strong>Named Entity Recognition:</strong> Achieved SOTA results on all Bangla datasets, published in <strong>NAACL 2025</strong>.
                 </>,
                 <>
-                    Developed a Bangla lemmatizer with 98.17% accuracy, which was published in <strong>EMNLP 2023</strong>.
+                    <strong>Lemmatization:</strong> Developed a Bangla lemmatizer with <strong>98.17% accuracy</strong>, published in <strong>EMNLP 2023</strong>.
                 </>
             ]
         }
     ];
 
     const skillsData = [
-        { name: "ML Frameworks", icon: Code, level: 90, technologies: ['PyTorch', 'TensorFlow'] },
-        { name: "NLP", icon: BookOpen, level: 85, technologies: ['Transformers', 'spaCy'] },
-        { name: "Cloud", icon: Briefcase, level: 75, technologies: ['AWS', 'Docker'] },
-        { name: "Data", icon: GraduationCap, level: 80, technologies: ['Pandas', 'SQL'] }
+        { name: "Programming", icon: Code, level: 95, technologies: ['Python'] },
+        { name: "ML Libraries", icon: BookOpen, level: 90, technologies: ['PyTorch', 'TensorFlow', 'Hugging Face', 'Scikit-learn', 'OpenCV', 'LangGraph', 'Pandas', 'Numpy'] },
+        { name: "Cloud & DevOps", icon: Briefcase, level: 85, technologies: ['AWS SageMaker', 'Bedrock', 'Docker', 'PyPI'] },
+        { name: "Databases", icon: GraduationCap, level: 80, technologies: ['MongoDB', 'MySQL', 'Chroma', 'Elasticsearch'] },
+        { name: "APIs & Tools", icon: Code, level: 85, technologies: ['FastAPI', 'Git/GitHub'] }
     ];
 
     const educationData = [
@@ -158,8 +162,12 @@ const Portfolio = () => {
                         { id: 'about', label: 'About Me', icon: <MapPin size={18} /> },
                         { id: 'experience', label: 'Experience', icon: <Briefcase size={18} /> },
                         { id: 'publications', label: 'Publications', icon: <BookOpen size={18} /> },
+                        { id: 'academic-research', label: 'Research', icon: <BookOpen size={18} /> },
+                        { id: 'personal-projects', label: 'Projects', icon: <Code size={18} /> },
                         { id: 'skills', label: 'Skills', icon: <Code size={18} /> },
-                        { id: 'education', label: 'Education', icon: <GraduationCap size={18} /> }
+                        { id: 'education', label: 'Education', icon: <GraduationCap size={18} /> },
+                        { id: 'linguistic-proficiency', label: 'Languages', icon: <BookOpen size={18} /> },
+                        { id: 'extracurricular', label: 'Activities', icon: <Award size={18} /> }
                     ].map((item) => (
                         <button
                             key={item.id}
@@ -210,8 +218,12 @@ const Portfolio = () => {
                                 { id: 'about', label: 'About Me', icon: <MapPin size={18} /> },
                                 { id: 'experience', label: 'Experience', icon: <Briefcase size={18} /> },
                                 { id: 'publications', label: 'Publications', icon: <BookOpen size={18} /> },
+                                { id: 'academic-research', label: 'Research', icon: <BookOpen size={18} /> },
+                                { id: 'personal-projects', label: 'Projects', icon: <Code size={18} /> },
                                 { id: 'skills', label: 'Skills', icon: <Code size={18} /> },
-                                { id: 'education', label: 'Education', icon: <GraduationCap size={18} /> }
+                                { id: 'education', label: 'Education', icon: <GraduationCap size={18} /> },
+                                { id: 'linguistic-proficiency', label: 'Languages', icon: <BookOpen size={18} /> },
+                                { id: 'extracurricular', label: 'Activities', icon: <Award size={18} /> }
                             ].map((item) => (
                                 <button
                                     key={item.id}
@@ -362,8 +374,37 @@ const Portfolio = () => {
                             <div className="w-24 h-1 bg-teal-500 mx-auto mt-4"></div>
                         </div>
 
+                        {/* Research Impact Metrics */}
+                        <div className="bg-gradient-to-r from-teal-50 to-blue-50 p-6 rounded-xl mb-8 border border-teal-200">
+                            <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">Research Impact</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                                <div className="bg-white p-4 rounded-lg shadow-md">
+                                    <div className="text-3xl font-bold text-teal-600">30+</div>
+                                    <div className="text-gray-600">Total Citations</div>
+                                </div>
+                                <div className="bg-white p-4 rounded-lg shadow-md">
+                                    <div className="text-3xl font-bold text-teal-600">3</div>
+                                    <div className="text-gray-600">h-index</div>
+                                </div>
+                                <div className="bg-white p-4 rounded-lg shadow-md">
+                                    <div className="text-3xl font-bold text-teal-600">2</div>
+                                    <div className="text-gray-600">i10-index</div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {[
+                                {
+                                    title: "BanNERD: A Benchmark Dataset and Context-Driven Approach for Bangla Named Entity Recognition",
+                                    authors: <>Md. Mahtab, Faisal Khan, <strong>Md. Ekramul Islam</strong>, Md. Shahad Mahmud Chowdhury, Labib Chowdhury, Sadia Afrin, Hakim Arif, Mohammad Mamun Or Rashid, Nabeel Mohammed, Mohammad Ruhul Amin</>,
+                                    publishedDate: "2025",
+                                    doi: "https://doi.org/10.18653/v1/2025.findings-naacl.xxx",
+                                    publicationType: <>Findings of the Association for Computational Linguistics: <strong>NAACL 2025</strong></>,
+                                    citationCount: "Recent",
+                                    publicationRank: "A*",
+                                    overview: "Presents BanNERD, a comprehensive benchmark dataset for Bangla Named Entity Recognition with state-of-the-art performance across all Bangla datasets."
+                                },
                                 {
                                     title: "SENTIGOLD: A LARGE BANGLA GOLD STANDARD MULTI-DOMAIN SENTIMENT ANALYSIS DATASET AND ITS EVALUATION",
                                     authors: <><strong>Md. Ekramul Islam</strong>, Labib Chowdhury, Faisal Ahamed Khan, Shazzad Hossain, Md Sourave Hossain, Mohammad Mamun Or Rashid, Nabeel Mohammed, Mohammad Ruhul Amin</>,
@@ -428,6 +469,127 @@ const Portfolio = () => {
                                     </p>
                                 </div>
                             ))}
+                        </div>
+                    </section>
+
+                    {/* Academic Research Section */}
+                    <section id="academic-research" className="mb-24 pt-16 scroll-mt-header" style={{ scrollMarginTop: "100px" }}>
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold text-gray-800">Academic Research</h2>
+                            <div className="w-24 h-1 bg-teal-500 mx-auto mt-4"></div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {[
+                                {
+                                    title: "Handwritten Character Generation",
+                                    subtitle: "Undergraduate Thesis",
+                                    description: "Experimented with GAN's (Conditional GAN, Auxiliary GAN etc) to synthesize images of Bangla handwritten characters from textual prompts.",
+                                    github: "https://github.com/Ekram007",
+                                    technologies: ["GAN", "Conditional GAN", "Auxiliary GAN", "Computer Vision"]
+                                },
+                                {
+                                    title: "Bangla Next Sequence Prediction",
+                                    subtitle: "Published in IEEE (ICAICT '20)",
+                                    description: "Proposed a solution using Trie and a combination of LSTM and N-gram to predict the relevant next sequence list in Bangla.",
+                                    github: "https://github.com/Ekram007",
+                                    technologies: ["LSTM", "N-gram", "Trie", "NLP"]
+                                },
+                                {
+                                    title: "Music Generation",
+                                    subtitle: "Personal Research Project",
+                                    description: "Conducted Midi music files collection, notes preparation and utilized BiLSTM GAN for music generation.",
+                                    github: "https://github.com/Ekram007",
+                                    technologies: ["BiLSTM", "GAN", "MIDI", "Music Generation"]
+                                }
+                            ].map((project, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                                >
+                                    <div className="flex items-center justify-between mb-4">
+                                        <h3 className="text-xl font-semibold text-gray-800 group-hover:text-teal-600 transition-colors">
+                                            {project.title}
+                                        </h3>
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-teal-600 hover:text-teal-800 transition-colors"
+                                        >
+                                            <Github size={20} />
+                                        </a>
+                                    </div>
+                                    <p className="text-teal-600 font-medium text-sm mb-3">{project.subtitle}</p>
+                                    <p className="text-gray-700 text-sm mb-4">{project.description}</p>
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.technologies.map((tech, i) => (
+                                            <span
+                                                key={i}
+                                                className="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Personal Projects Section */}
+                    <section id="personal-projects" className="mb-24 pt-16 scroll-mt-header" style={{ scrollMarginTop: "100px" }}>
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold text-gray-800">Personal Projects</h2>
+                            <div className="w-24 h-1 bg-teal-500 mx-auto mt-4"></div>
+                        </div>
+
+                        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div className="flex items-center justify-between mb-6">
+                                <h3 className="text-2xl font-semibold text-gray-800">CrossPress Digest</h3>
+                                <span className="text-sm text-gray-500">Jan 2025 – Present</span>
+                            </div>
+                            
+                            <div className="space-y-4">
+                                <p className="text-gray-700">
+                                    Led backend and ML development for a system that identifies duplicate news stories from multiple sources using semantic search, and summarizes with Gemini.
+                                </p>
+                                
+                                <div>
+                                    <h4 className="font-semibold text-gray-800 mb-2">Key Features:</h4>
+                                    <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                                        <li>Implemented search service using vector database (Chroma) and LLM-based RAG to answer user queries</li>
+                                        <li>Duplicate news story identification using semantic search</li>
+                                        <li>Automated summarization with Gemini API</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 className="font-semibold text-gray-800 mb-2">Technologies:</h4>
+                                    <div className="flex flex-wrap gap-2">
+                                        {['Elasticsearch', 'Sentence Transformers', 'MongoDB', 'Gemini API', 'Chroma', 'Docker', 'FastAPI', 'Python'].map((tech, i) => (
+                                            <span
+                                                key={i}
+                                                className="px-3 py-1 bg-teal-100 text-teal-700 text-sm rounded-full"
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="pt-4">
+                                    <a
+                                        href="http://news-agent-ground.s3-website-us-east-1.amazonaws.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
+                                    >
+                                        <span>Live Site</span>
+                                        <ArrowRight size={16} />
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
@@ -552,7 +714,136 @@ const Portfolio = () => {
                             </div>
                         </div>
                     </section>
-                    {/* ... */}
+
+                    {/* Linguistic Proficiency Section */}
+                    <section id="linguistic-proficiency" className="py-24 bg-gradient-to-br from-teal-50 to-white scroll-mt-header" style={{ scrollMarginTop: "100px" }}>
+                        <div className="max-w-6xl mx-auto px-6">
+                            <h2 className="text-4xl font-bold text-center mb-16 relative">
+                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400">
+                                    Linguistic Proficiency
+                                </span>
+                                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-teal-400 to-transparent" />
+                            </h2>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                                    <h3 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
+                                        <span className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold">E</span>
+                                        English
+                                    </h3>
+                                    <div className="space-y-4">
+                                        <div className="flex justify-between items-center">
+                                            <span className="text-gray-600">IELTS Overall Score</span>
+                                            <span className="text-2xl font-bold text-teal-600">7.5</span>
+                                        </div>
+                                        <div className="space-y-2">
+                                            <div className="flex justify-between">
+                                                <span className="text-gray-600">Listening</span>
+                                                <span className="font-semibold text-teal-600">8.5</span>
+                                            </div>
+                                            <div className="flex justify-between">
+                                                <span className="text-gray-600">Reading</span>
+                                                <span className="font-semibold text-teal-600">8.0</span>
+                                            </div>
+                                            <div className="flex justify-between">
+                                                <span className="text-gray-600">Writing</span>
+                                                <span className="font-semibold text-teal-600">6.0</span>
+                                            </div>
+                                            <div className="flex justify-between">
+                                                <span className="text-gray-600">Speaking</span>
+                                                <span className="font-semibold text-teal-600">6.5</span>
+                                            </div>
+                                        </div>
+                                        <div className="pt-2 text-sm text-gray-500">
+                                            <strong>IELTS</strong> - International English Language Testing System
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                                    <h3 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
+                                        <span className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold">ব</span>
+                                        Bangla
+                                    </h3>
+                                    <div className="space-y-4">
+                                        <div className="flex justify-between items-center">
+                                            <span className="text-gray-600">Proficiency Level</span>
+                                            <span className="text-2xl font-bold text-teal-600">Native</span>
+                                        </div>
+                                        <p className="text-gray-600">
+                                            Native language speaker with deep understanding of Bengali literature, 
+                                            culture, and linguistic nuances. Extensive experience in Bangla NLP research 
+                                            and development.
+                                        </p>
+                                        <div className="pt-2 text-sm text-gray-500">
+                                            <strong>Native Language</strong> - Fluent in all aspects
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Extra-curricular Activities Section */}
+                    <section id="extracurricular" className="py-24 bg-gray-50 scroll-mt-header" style={{ scrollMarginTop: "100px" }}>
+                        <div className="max-w-6xl mx-auto px-6">
+                            <h2 className="text-4xl font-bold text-center mb-16">
+                                Extra-curricular Activities
+                                <div className="mt-2 w-24 h-1 bg-teal-500 mx-auto"></div>
+                            </h2>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {[
+                                    {
+                                        title: "Chess Achievement",
+                                        description: "11th in National Junior Chess Championship-2013, Bangladesh",
+                                        icon: "♟️",
+                                        category: "Sports"
+                                    },
+                                    {
+                                        title: "Musical Club Executive",
+                                        description: "Former Executive member (2017-2019) at RIM Musical Club, SUST, Bangladesh",
+                                        icon: "🎵",
+                                        category: "Leadership"
+                                    },
+                                    {
+                                        title: "Science Club Member",
+                                        description: "Active in Dhaka College Science Club (2014-2016)",
+                                        icon: "🔬",
+                                        category: "Academic"
+                                    },
+                                    {
+                                        title: "MUN & Debating",
+                                        description: "Active in NBPSC MUN & Debating Club (2010-2014)",
+                                        icon: "💬",
+                                        category: "Debate"
+                                    },
+                                    {
+                                        title: "Cultural Events",
+                                        description: "Volunteered in different events and performed as a guitarist in cultural events",
+                                        icon: "🎸",
+                                        category: "Volunteering"
+                                    }
+                                ].map((activity, index) => (
+                                    <div
+                                        key={index}
+                                        className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                                    >
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="text-3xl">{activity.icon}</div>
+                                            <div>
+                                                <h3 className="text-xl font-semibold text-gray-800 group-hover:text-teal-600 transition-colors">
+                                                    {activity.title}
+                                                </h3>
+                                                <span className="text-sm text-teal-600 font-medium">{activity.category}</span>
+                                            </div>
+                                        </div>
+                                        <p className="text-gray-700 text-sm">{activity.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
                 </main>
 
                 {/* Footer */}
@@ -566,13 +857,23 @@ const Portfolio = () => {
                             <div>
                                 <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
                                 <div className="space-y-2">
-                                    {['about', 'experience', 'publications', 'skills', 'education'].map((item) => (
+                                    {[
+                                        { id: 'about', label: 'About Me' },
+                                        { id: 'experience', label: 'Experience' },
+                                        { id: 'publications', label: 'Publications' },
+                                        { id: 'academic-research', label: 'Research' },
+                                        { id: 'personal-projects', label: 'Projects' },
+                                        { id: 'skills', label: 'Skills' },
+                                        { id: 'education', label: 'Education' },
+                                        { id: 'linguistic-proficiency', label: 'Languages' },
+                                        { id: 'extracurricular', label: 'Activities' }
+                                    ].map((item) => (
                                         <button
-                                            key={item}
-                                            onClick={() => scrollToSection(item)}
-                                            className="text-gray-400 hover:text-teal-400 transition-colors capitalize"
+                                            key={item.id}
+                                            onClick={() => scrollToSection(item.id)}
+                                            className="text-gray-400 hover:text-teal-400 transition-colors"
                                         >
-                                            {item === 'about' ? 'About Me' : item}
+                                            {item.label}
                                         </button>
                                     ))}
                                 </div>
