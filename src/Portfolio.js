@@ -97,16 +97,86 @@ const Portfolio = () => {
             period: "Jan 2022 – Jul 2024 | Hybrid",
             responsibilities: [
                 <>
-                    <strong>Shallow Parsing:</strong> Developed data preparation, training, inference pipelines with API (FastAPI), PyPI package, achieving SOTA results (<strong>96.47 FScore</strong>) on Penn Treebank.
+                    <div className="text-gray-700">
+                    Involved in the entire ML life cycle including data collection, preprocessing, model selection, training, evaluation, tuning deployment, monitoring and finally documenting the outcome in a manuscript. The projects I was involved in:                  
+                    </div>
                 </>,
                 <>
-                    <strong>Sentiment Analysis:</strong> Conducted transformer based model experimentation, cross-dataset analysis, statistical significance tests, leading to a publication at <strong>KDD '23</strong> (First Author).
+                    <div className="mt-4">
+                        <div className="font-semibold text-gray-800 mb-2">Corpus Project (Bangla):</div>
+                        <div className="ml-4 text-gray-700 mb-3">Aim was to develop a complete ecosystem for Bangla NLP filed, where deliverables include corpora, language models, downstream models, packages/api, applications etc. Some of my key contributions are: </div>
+                        <div className="ml-4 space-y-4">
+                            <div>
+                                <div className="font-semibold text-gray-800 mb-2">Shallow and Deep Parsing (Core Component Lead):</div>
+                                <div className="ml-4 space-y-2 text-gray-700">
+                                    <div>• <strong>Led development</strong> of separate and <strong>joint modeling pipelines</strong> for simultaneous training of shallow and deep parsing tasks, utilizing State-of-the-Art (SOTA) architectures.</div>
+                                    <div>• Engineered the complete <strong>inference pipeline</strong>, including a <strong>PyPI package</strong>, a <strong>FastAPI</strong> service endpoint, and a <strong>Docker container</strong> for seamless deployment.</div>
+                                    <div>• Achieved <strong>SOTA results</strong> on the Penn Treebank (English) for both tasks (Shallow Parsing: <strong>96.47 FScore</strong>; Deep Parsing: UAS: <strong>97.49%</strong>, LAS: <strong>96.36%</strong>).</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="font-semibold text-gray-800 mb-2">Named Entity Recognition (NER):</div>
+                                <div className="ml-4 space-y-2 text-gray-700">
+                                    <div>• Developed the baseline NER model using <strong>BERT, BiLSTM, and CRF</strong> architectures.</div>
+                                    <div>• <strong>Improved performance</strong> by experimenting with advanced class imbalance handling techniques, including <strong>curricular-face loss</strong> (achieving a <strong>1.93% increase in macro F1</strong> over the previous SOTA).</div>
+                                    <div>• Created and integrated a <strong>Bangla gazetteer</strong> with neural networks to enhance overall NER performance.</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="font-semibold text-gray-800 mb-2">Lemmatization (BanLemma):</div>
+                                <div className="ml-4 space-y-2 text-gray-700">
+                                    <div>• <strong>Collaborated with linguists</strong> to develop a novel <strong>rule-based lemmatizer</strong> for Bangla, with rules derived from analysis of concatenation patterns and dictionary insights. (Resulting work <strong>accepted to EMNLP '23</strong> with <strong>98.17% accuracy</strong> on the internal test set).</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="font-semibold text-gray-800 mb-2">Language Model Training & Classification:</div>
+                                <div className="ml-4 space-y-2 text-gray-700">
+                                    <div>• Prepared the initial <strong>pre-training boilerplate</strong> for <strong>BERT, XLNet, and Word2Vec</strong> using Hugging Face's <em>transformers</em> and <em>datasets</em> libraries.</div>
+                                    <div>• Implemented a <strong>CNN model</strong> to accurately classify text as Romanized Bangla (Banglish), achieving <strong>0.93 macro F1</strong>, which was then used to develop a specialized corpus.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </>,
                 <>
-                    <strong>Named Entity Recognition:</strong> Achieved SOTA results on all Bangla datasets, published in <strong>NAACL 2025</strong>.
+                    <div className="mt-4">
+                        <div className="font-semibold text-gray-800 mb-2">Sentiment Analysis and Research:</div>
+                        <div className="ml-4 space-y-2 text-gray-700">
+                            <div>• <strong>First-authored</strong> the paper, <strong>"SentiGOLD: A Large Bangla Gold Standard Multi-Domain Sentiment Analysis Dataset and its Evaluation," published at KDD '23</strong> (a top-ranked data science conference).</div>
+                            <div>• Conducted extensive <strong>transformer-based model experimentation</strong>, <strong>cross-dataset analysis</strong>, and rigorous <strong>statistical significance tests</strong> to develop the benchmarking model and contribute to manuscript crafting.</div>
+                        </div>
+                    </div>
                 </>,
                 <>
-                    <strong>Lemmatization:</strong> Developed a Bangla lemmatizer with <strong>98.17% accuracy</strong>, published in <strong>EMNLP 2023</strong>.
+                    <div className="mt-4">
+                        <div className="font-semibold text-gray-800 mb-2">Computer Vision Systems:</div>
+                        <div className="ml-4 space-y-4">
+                            <div>
+                                <div className="font-semibold text-gray-800 mb-2">Human Monitoring Live System:</div>
+                                <div className="ml-4 space-y-2 text-gray-700">
+                                    <div>• Developed a production-ready live system for monitoring people using office lobby cameras.</div>
+                                    <div>• Utilized <strong>YOLOv8</strong> for accurate human detection and <strong>DeepSORT</strong> for consistent, multi-frame tracking.</div>
+                                    <div>• Implemented <strong>ArcFace</strong> for extracting distinct face embeddings and <strong>cosine similarity</strong> for accurate facial recognition and matching.</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="font-semibold text-gray-800 mb-2">Face Anti-Spoofing:</div>
+                                <div className="ml-4 space-y-2 text-gray-700">
+                                    <div>• Created a multi-model system to identify spoof attempts (vs. live humans) using models for <strong>smile detection, eye blink detection, hand gestures detection, and head movements detection</strong>.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </>,
+                <>
+                    <div className="mt-6 pt-4 border-t border-gray-300">
+                        <div className="font-semibold text-gray-800 mb-2">Key Achievements:</div>
+                        <div className="ml-4 space-y-2 text-gray-700">
+                            <div>• <strong>Published Sentiment Analysis research work in KDD '23</strong> (Ranked 1 conference in data science).</div>
+                            <div>• <strong>Solely responsible for the two most complex Corpus components (Shallow and Deep Parsing)</strong>, achieving <strong>SOTA results</strong> on the Penn Treebank.</div>
+                            <div>• <strong>Led development of a core Corpus component (Lemmatizer)</strong>, with research accepted to EMNLP '23.</div>
+                        </div>
+                    </div>
                 </>
             ]
         }
@@ -330,41 +400,86 @@ const Portfolio = () => {
                 <main className="max-w-6xl mx-auto px-6 py-16">
                     {/* Experience Section */}
                     <section id="experience" className="mb-24 pt-16 scroll-mt-header" style={{ scrollMarginTop: "100px" }}>
-                        <h2 className="text-4xl font-bold text-center mb-16 relative">
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-teal-400">
-                                Professional Journey
-                            </span>
-                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-teal-400 to-transparent" />
-                        </h2>
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl md:text-5xl font-bold mb-6 relative">
+                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400">
+                                    Professional Journey
+                                </span>
+                                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 rounded-full"></div>
+                            </h2>
+                            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                                A timeline of my professional growth and key achievements in the field of Machine Learning and AI
+                            </p>
+                        </div>
 
-                        <div className="space-y-12">
-                            {experiences.map((job, index) => (
-                                <div key={index} className="relative">
-                                    {index !== 1 && <div className="absolute top-0 bottom-0 left-7 md:left-9 w-0.5 bg-teal-200"></div>}
-                                    <div className="flex">
-                                        <div className="flex flex-col items-center mr-4 md:mr-8">
-                                            <div className="w-14 h-14 md:w-18 md:h-18 flex items-center justify-center bg-teal-600 text-white rounded-full shadow-lg z-10">
-                                                <Briefcase size={24} />
-                                            </div>
+                        <div className="relative">
+                            {/* Animated Timeline Line */}
+                            <div className="hidden md:block absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-teal-200 via-teal-300 to-teal-200 rounded-full"></div>
+                            
+                            <div className="space-y-16">
+                                {experiences.map((job, index) => (
+                                    <div key={index} className="relative group">
+                                        {/* Timeline Dot with Animation */}
+                                        <div className="hidden md:block absolute left-6 top-8 w-4 h-4 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full border-4 border-white shadow-xl z-20 transform transition-all duration-300 group-hover:scale-125 group-hover:shadow-2xl">
+                                            <div className="absolute inset-0 bg-teal-400 rounded-full animate-ping opacity-20"></div>
                                         </div>
-                                        <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow flex-1">
-                                            <div className="flex flex-wrap justify-between items-start mb-4">
-                                                <div>
-                                                    <h3 className="text-xl md:text-2xl font-semibold text-gray-800">{job.title}</h3>
-                                                    <h4 className="text-lg text-teal-600 font-medium">{job.company}</h4>
+
+                                        <div className="md:ml-16">
+                                            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group-hover:scale-[1.02] overflow-hidden border border-gray-100">
+                                                {/* Header with Gradient Background */}
+                                                <div className="bg-gradient-to-r from-teal-50 to-blue-50 p-6 md:p-8 border-b border-gray-100">
+                                                    <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                                                        <div className="flex-1">
+                                                            <div className="flex items-center gap-3 mb-2">
+                                                                <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg">
+                                                                    <Briefcase className="text-white" size={20} />
+                                                                </div>
+                                                                <div>
+                                                                    <h3 className="text-xl md:text-2xl font-bold text-gray-800 group-hover:text-teal-700 transition-colors">
+                                                                        {job.title}
+                                                                    </h3>
+                                                                    <h4 className="text-lg font-semibold text-teal-600 group-hover:text-teal-700 transition-colors">
+                                                                        {job.company}
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="flex flex-col items-start md:items-end gap-2">
+                                                            <span className="inline-flex items-center px-4 py-2 bg-teal-100 text-teal-800 rounded-full text-sm font-medium shadow-sm">
+                                                                {job.period}
+                                                            </span>
+                                                            <div className="flex items-center gap-1 text-teal-600">
+                                                                <div className="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
+                                                                <span className="text-xs font-medium">Current</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <span className="text-gray-600 bg-gray-100 px-4 py-1 rounded-full text-sm">{job.period}</span>
+
+                                                {/* Content Area */}
+                                                <div className="p-6 md:p-8">
+                                                    <div className="space-y-4">
+                                                        {job.responsibilities.map((responsibility, i) => (
+                                                            <div key={i} className="group/item">
+                                                                {responsibility}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+
+                                                {/* Hover Effect Overlay */}
+                                                <div className="absolute inset-0 bg-gradient-to-r from-teal-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                                             </div>
-                                            <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                                                {job.responsibilities.map((responsibility, i) => (
-                                                    <li key={i}>{responsibility}</li>
-                                                ))}
-                                            </ul>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
+
+                        {/* Decorative Elements */}
+                        <div className="absolute top-20 left-10 w-20 h-20 bg-teal-100 rounded-full opacity-20 animate-pulse"></div>
+                        <div className="absolute bottom-20 right-10 w-16 h-16 bg-blue-100 rounded-full opacity-20 animate-pulse delay-1000"></div>
+                        <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-teal-200 rounded-full opacity-30 animate-pulse delay-500"></div>
                     </section>
 
                     {/* Publications Section */}
@@ -908,3 +1023,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
