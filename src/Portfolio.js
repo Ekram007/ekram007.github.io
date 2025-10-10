@@ -210,8 +210,9 @@ const Portfolio = () => {
     return (
         <div className="flex flex-col md:flex-row min-h-screen bg-gray-50">
             {/* Side Navigation - Desktop */}
-            <nav className={`hidden md:flex flex-col fixed left-0 top-0 bottom-0 w-64 pt-8 shadow-xl z-50 transition-all duration-300 ${isScrolled ? 'bg-teal-800 bg-opacity-90 backdrop-blur-sm' : 'bg-gradient-to-b from-teal-700 to-teal-800'}`}>
-                <div className="p-6 border-b border-teal-600">
+            <nav className={`hidden md:flex flex-col fixed left-0 top-0 h-screen w-64 shadow-xl z-50 transition-all duration-300 ${isScrolled ? 'bg-teal-800 bg-opacity-90 backdrop-blur-sm' : 'bg-gradient-to-b from-teal-700 to-teal-800'}`}>
+                {/* Header Section - Fixed height */}
+                <div className="p-6 border-b border-teal-600 flex-shrink-0">
                     <div className="flex justify-center mb-4">
                         <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-teal-300 shadow-lg shadow-teal-200/50 transform transition-transform hover:scale-110">
                             <img
@@ -227,7 +228,8 @@ const Portfolio = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col flex-grow p-6 space-y-4">
+                {/* Navigation Menu - Scrollable */}
+                <div className="flex-1 overflow-y-auto p-6 space-y-4">
                     {[
                         { id: 'about', label: 'About Me', icon: <MapPin size={18} /> },
                         { id: 'experience', label: 'Experience', icon: <Briefcase size={18} /> },
@@ -242,7 +244,7 @@ const Portfolio = () => {
                         <button
                             key={item.id}
                             onClick={() => scrollToSection(item.id)}
-                            className={`flex items-center gap-4 py-3 px-4 rounded-lg transition-all duration-300 
+                            className={`flex items-center gap-4 py-3 px-4 rounded-lg transition-all duration-300 w-full text-left
                                 ${activeSection === item.id
                                     ? 'bg-teal-600 text-white shadow-md'
                                     : 'text-teal-100 hover:bg-teal-600 hover:text-white hover:translate-x-2'}`
@@ -254,7 +256,8 @@ const Portfolio = () => {
                     ))}
                 </div>
 
-                <div className="p-6 border-t border-teal-600">
+                {/* Footer Section - Fixed height */}
+                <div className="p-6 border-t border-teal-600 flex-shrink-0">
                     <div className="flex justify-center space-x-3">
                         <a href="https://www.linkedin.com/in/ekramul-islam-b824a1176/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-teal-600 flex items-center justify-center hover:bg-white hover:text-teal-700 transition-all">
                             <Linkedin size={16} />
