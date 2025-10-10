@@ -464,9 +464,6 @@ const Portfolio = () => {
                                         </a>
                                     </p>
                                     <p className="text-gray-700 text-sm mb-4">{pub.overview}</p>
-                                    <p className="text-gray-600 text-sm mb-1">
-                                        <strong>Citations:</strong> {pub.citationCount}
-                                    </p>
                                 </div>
                             ))}
                         </div>
