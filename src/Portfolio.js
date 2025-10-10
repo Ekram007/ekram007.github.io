@@ -138,10 +138,22 @@ const Portfolio = () => {
                 </>,
                 <>
                     <div className="mt-4">
-                        <div className="font-semibold text-gray-800 mb-2">Sentiment Analysis and Research:</div>
+                        <div className="font-semibold text-gray-800 mb-2">Sentiment Analysis and Research (SentiGOLD):</div>
                         <div className="ml-4 space-y-2 text-gray-700">
                             <div>• <strong>First-authored</strong> the paper, <strong>"SentiGOLD: A Large Bangla Gold Standard Multi-Domain Sentiment Analysis Dataset and its Evaluation," published at KDD '23</strong> (a top-ranked data science conference).</div>
                             <div>• Conducted extensive <strong>transformer-based model experimentation</strong>, <strong>cross-dataset analysis</strong>, and rigorous <strong>statistical significance tests</strong> to develop the benchmarking model and contribute to manuscript crafting.</div>
+                            <div>• Developed a comprehensive <strong>live sentiment analysis platform</strong> with 70,000 samples across 30 domains, achieving <strong>0.62 macro F1 score</strong> and <strong>0.88 IAA score</strong> with government-approved linguistic framework.</div>
+                            <div className="mt-3">
+                                <a
+                                    href="https://sentiment.bangla.gov.bd/sentiment-emotion-analysis"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors text-sm"
+                                >
+                                    <span>View Live</span>
+                                    <ArrowRight size={14} />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </>,
@@ -580,6 +592,19 @@ const Portfolio = () => {
                                         </a>
                                     </p>
                                     <p className="text-gray-700 text-sm mb-4">{pub.overview}</p>
+                                    {pub.title.includes("SENTIGOLD") && (
+                                        <div className="mt-4">
+                                            <a
+                                                href="https://sentiment.bangla.gov.bd/sentiment-emotion-analysis"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
+                                            >
+                                                <span>View Live</span>
+                                                <ArrowRight size={16} />
+                                            </a>
+                                        </div>
+                                    )}
                                 </div>
                             ))}
                         </div>
