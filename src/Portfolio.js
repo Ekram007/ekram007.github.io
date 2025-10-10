@@ -178,7 +178,7 @@ const Portfolio = () => {
 
                 <div className="p-6 border-t border-teal-600">
                     <div className="flex justify-center space-x-3">
-                        <a href="https://linkedin.com/in/ekram" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-teal-600 flex items-center justify-center hover:bg-white hover:text-teal-700 transition-all">
+                        <a href="https://www.linkedin.com/in/ekramul-islam-b824a1176/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-teal-600 flex items-center justify-center hover:bg-white hover:text-teal-700 transition-all">
                             <Linkedin size={16} />
                         </a>
                         <a href="https://github.com/Ekram007" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-teal-600 flex items-center justify-center hover:bg-white hover:text-teal-700 transition-all">
@@ -231,13 +231,13 @@ const Portfolio = () => {
             </div>
 
             {/* Main Content */}
-            <div className="flex-1 md:ml-64">
+            <div className="flex-1 md:ml-64 pt-16 md:pt-0">
                 {/* Enhanced About Me Section */}
-                <header id="about" className="min-h-screen md:h-screen bg-gradient-to-br from-teal-900 via-gray-800 to-teal-700 text-white pt-20 md:pt-0 flex flex-col items-center justify-center relative overflow-hidden">
+                <header id="about" className="min-h-[100dvh] md:h-screen bg-gradient-to-br from-teal-900 via-gray-800 to-teal-700 text-white pt-20 md:pt-0 flex flex-col items-center justify-center relative overflow-hidden">
                     {/* ... existing background elements ... */}
 
                     {/* Profile Image for Mobile */}
-                    <div className="md:hidden w-32 h-32 rounded-full overflow-hidden border-4 border-teal-300 shadow-xl mb-6 transform hover:scale-105 transition-transform">
+                    <div className="md:hidden w-28 h-28 rounded-full overflow-hidden border-4 border-teal-300 shadow-xl mb-6 transform hover:scale-105 transition-transform">
                         <img
                             src="/profile.jpg"
                             alt="Ekramul Islam"
@@ -246,7 +246,7 @@ const Portfolio = () => {
                     </div>
 
                     <div className="max-w-6xl mx-auto px-4 md:px-6 flex flex-col items-center gap-4 md:gap-6 relative text-center">
-                        <h1 className="text-4xl md:text-7xl font-bold drop-shadow-lg space-y-2 md:space-y-4">
+                        <h1 className="text-3xl md:text-7xl font-bold drop-shadow-lg space-y-2 md:space-y-4">
                             <div className="bg-gradient-to-r from-teal-300 to-white bg-clip-text text-transparent">
                                 Hi, I'm Ekram
                             </div>
@@ -265,7 +265,7 @@ const Portfolio = () => {
                         </div>
 
                         {/* Bio Section */}
-                        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4 md:gap-8 text-base md:text-xl mt-4 md:mt-8 text-teal-100">
+                        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-2 md:gap-8 text-sm md:text-xl gap-4 md:gap-8 text-base md:text-xl mt-4 md:mt-8 text-teal-100">
                             <div className="space-y-2 md:space-y-4 relative px-4">
                                 <p className="relative z-10">
                                     Specializing in NLP and Machine Learning, I bridge the gap between
@@ -281,7 +281,7 @@ const Portfolio = () => {
                         </div>
 
                         {/* Action Buttons */}
-                        <div className="flex flex-col md:flex-wrap items-center justify-center gap-4 md:gap-6 mt-8 md:mt-12">
+                        <div className="flex flex-col md:flex-wrap items-center gap-3 items-center justify-center gap-4 md:gap-6 mt-8 md:mt-12">
                             <a href="/resume.pdf" download className="relative group flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-teal-600 rounded-full hover:bg-teal-700 transition-all shadow-xl hover:shadow-2xl">
                                 <ArrowRight className="animate-bounce-horizontal" size={18} />
                                 <span className="text-sm md:text-lg font-medium">Download Resume</span>
