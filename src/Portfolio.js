@@ -81,13 +81,11 @@ const Portfolio = () => {
             period: "Aug 2024 – Present | Remote",
             responsibilities: [
                 <>
-                    Developed a conversational marketing co-planner agent with <strong>LangGraph</strong> tool-calling capabilities to automate complex ML workflows. This agent enables dynamic clustering of over 2,000 Healthcare Professionals by allowing users to select features, filter datasets, and generate personalized marketing campaigns while providing answers to any query from the dataset. <strong>Recognized with Impact Award</strong>.
-                </>,
-                <>
-                    Deployed open-source LLMs (e.g., DeepSeek, Qwen) on <strong>AWS SageMaker DJL Serving</strong> with vLLM backends, achieving first-token latency as low as <strong>90ms</strong>.
-                </>,
-                <>
-                    Collaborated with cross-functional teams to develop data-exploration-agent using <strong>LangGraph</strong>, where agent parse user queries, generate SQL Query, retrieved data and generate final answers with visualizations.
+                    <div className="space-y-2">
+                        <div>• Developed a conversational marketing co-planner agent with <strong>LangGraph</strong> tool-calling capabilities to automate complex ML workflows. This agent enables dynamic clustering of over 2,000 Healthcare Professionals by allowing users to select features, filter datasets, and generate personalized marketing campaigns while providing answers to any query from the dataset. <strong>Recognized with Impact Award</strong>.</div>
+                        <div>• Deployed open-source LLMs (e.g., DeepSeek, Qwen) on <strong>AWS SageMaker DJL Serving</strong> with vLLM backends, achieving first-token latency as low as <strong>90ms</strong>.</div>
+                        <div>• Collaborated with cross-functional teams to develop data-exploration-agent using <strong>LangGraph</strong>, where agent parse user queries, generate SQL Query, retrieved data and generate final answers with visualizations.</div>
+                    </div>
                 </>
             ]
         },
