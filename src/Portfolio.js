@@ -461,10 +461,12 @@ const Portfolio = () => {
                                                             <span className="inline-flex items-center px-4 py-2 bg-teal-100 text-teal-800 rounded-full text-sm font-medium shadow-sm">
                                                                 {job.period}
                                                             </span>
-                                                            <div className="flex items-center gap-1 text-teal-600">
-                                                                <div className="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
-                                                                <span className="text-xs font-medium">Current</span>
-                                                            </div>
+                                                            {job.period.includes('Present') && (
+                                                                <div className="flex items-center gap-1 text-teal-600">
+                                                                    <div className="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
+                                                                    <span className="text-xs font-medium">Current</span>
+                                                                </div>
+                                                            )}
                                                         </div>
                                                     </div>
                                                 </div>
