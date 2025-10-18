@@ -275,6 +275,9 @@ const Portfolio = () => {
                         <a href="https://github.com/Ekram007" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-softteal-600 flex items-center justify-center hover:bg-softteal-500 hover:text-white transition-all">
                             <Github size={16} />
                         </a>
+                        <a href="https://scholar.google.com/citations?user=TmiwxJwAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-softteal-600 flex items-center justify-center hover:bg-softteal-500 hover:text-white transition-all" title="Google Scholar">
+                            <GraduationCap size={16} />
+                        </a>
                         <a href="mailto:ei.ekramul.islam@gmail.com" className="w-9 h-9 rounded-full bg-softteal-600 flex items-center justify-center hover:bg-softteal-500 hover:text-white transition-all">
                             <Mail size={16} />
                         </a>
@@ -1022,6 +1025,7 @@ const Portfolio = () => {
                                     {[
                                         { icon: Github, link: 'https://github.com/Ekram007' },
                                         { icon: Linkedin, link: 'https://www.linkedin.com/in/ekramul-islam-b824a1176/' },
+                                        { icon: GraduationCap, link: 'https://scholar.google.com/citations?user=TmiwxJwAAAAJ&hl=en&oi=sra', title: 'Google Scholar' },
                                         { icon: Mail, link: 'mailto:ei.ekramul.islam@gmail.com' },
                                         { icon: Phone, link: 'tel:+8801521434732' }
                                     ].map((social, i) => (
@@ -1031,6 +1035,7 @@ const Portfolio = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="w-10 h-10 rounded-full bg-darkslate-800 flex items-center justify-center hover:bg-softteal-600 transition-colors"
+                                            title={social.title || ''}
                                         >
                                             <social.icon size={18} />
                                         </a>
