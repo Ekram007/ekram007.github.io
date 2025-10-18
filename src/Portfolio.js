@@ -1009,7 +1009,7 @@ const Portfolio = () => {
                                         <button
                                             key={item.id}
                                             onClick={() => scrollToSection(item.id)}
-                                            className="text-darkslate-400 hover:text-softteal-400 transition-colors"
+                                            className="block text-darkslate-400 hover:text-softteal-400 transition-colors"
                                         >
                                             {item.label}
                                         </button>
@@ -1039,7 +1039,7 @@ const Portfolio = () => {
                             </div>
                         </div>
                         <div className="mt-12 pt-8 border-t border-darkslate-800 text-center text-darkslate-400">
-                            <p>© {new Date().getFullYear()} Ekramul Islam. Crafted with passion and React</p>
+                            <p>© {new Date().getFullYear()} Ekramul Islam. Crafted with React</p>
                         </div>
                     </div>
                 </footer>
