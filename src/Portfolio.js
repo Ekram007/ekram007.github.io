@@ -387,7 +387,7 @@ const Portfolio = () => {
 
                             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
                                 {[
-                                    { icon: MapPin, text: "Dhaka, BD" },
+                                    { icon: MapPin, text: "Dhaka, Bangladesh" },
                                     { icon: Phone, text: "(+880) 1521434732" },
                                     { icon: Mail, text: "ei.ekramul.islam@gmail.com" }
                                 ].map((item, index) => (
