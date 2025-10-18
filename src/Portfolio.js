@@ -1023,7 +1023,7 @@ const Portfolio = () => {
                                 <div className="flex space-x-4">
                                     {[
                                         { icon: Github, link: 'https://github.com/Ekram007' },
-                                        { icon: Linkedin, link: 'https://linkedin.com/in/ekram' },
+                                        { icon: Linkedin, link: 'https://www.linkedin.com/in/ekramul-islam-b824a1176/' },
                                         { icon: Mail, link: 'mailto:ei.ekramul.islam@gmail.com' },
                                         { icon: Phone, link: 'tel:+8801521434732' }
                                     ].map((social, i) => (
